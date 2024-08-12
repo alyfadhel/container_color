@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:messenger/color/cubit/cubit.dart';
 import 'package:messenger/color/cubit/state.dart';
+import 'package:messenger/color/widgets/build_container_item.dart';
 
 class ColorScreen extends StatelessWidget {
   const ColorScreen({super.key});
@@ -30,7 +31,7 @@ class ColorScreen extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  buildContainerItem(cubit.selectCurrentIndex, context),
+                  BuildContainerItem(index: ColorsCubit.get(context).selectCurrentIndex,),
                   const SizedBox(
                     height: 20.0,
                   ),
@@ -82,13 +83,3 @@ class ColorScreen extends StatelessWidget {
     );
   }
 }
-Widget buildContainerItem(index, context)=>Container(
-  width: double.infinity,
-  height: 150.0,
-  decoration: BoxDecoration(
-    color: ColorsCubit.get(context).taskColors[index],
-    borderRadius: BorderRadius.circular(
-      20.0,
-    ),
-  ),
-);
