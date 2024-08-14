@@ -3,11 +3,15 @@ import 'package:messenger/color/cubit/cubit.dart';
 
 class BuildContainerItem extends StatelessWidget {
   final int index;
+
   const BuildContainerItem({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: const Duration(
+        milliseconds: 750,
+      ),
       width: double.infinity,
       height: 150.0,
       decoration: BoxDecoration(
