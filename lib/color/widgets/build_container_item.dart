@@ -12,6 +12,7 @@ class BuildContainerItem extends StatelessWidget {
       duration: const Duration(
         milliseconds: 750,
       ),
+      curve: Curves.easeInCubic,
       width: double.infinity,
       height: 150.0,
       decoration: BoxDecoration(
